@@ -10,18 +10,20 @@
   </head>
   <body>
     <!-- start header -->
-    <header class="header">
+    <header class="header" id="home">
       <div class="container">
         <!-- start navbar -->
         <nav class="navbar">
           <img src="images/logo.png" alt="logo" class="logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sideMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portofolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
         <!-- end navbar -->
         <!-- start header-text -->
@@ -38,7 +40,7 @@
     <!-- end header -->
 
     <!-- start about -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
@@ -94,7 +96,7 @@
     <!-- end about -->
 
     <!-- start services -->
-    <section class="services">
+    <section class="services" id="services">
       <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
@@ -122,7 +124,7 @@
     <!-- end services -->
 
     <!-- start portfolio -->
-    <section class="portfolio">
+    <section class="portfolio" id="portofolio">
       <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
@@ -155,6 +157,39 @@
       </div>
     </section>
     <!-- end portfolio -->
+
+    <!-- start contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>contact@example.com</p>
+            <p><i class="fa-solid fa-phone"></i>082387670510</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="#" download class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span class="msg" id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; Martin. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+      </div>
+    </section>
+    <!-- end contact -->
 
     <!-- scripts -->
     <script src="scripts/index.js"></script>
